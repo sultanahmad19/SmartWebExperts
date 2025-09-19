@@ -1,0 +1,412 @@
+/* Modern Review Logos Section */
+.review-logos-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  /* Hide scroll bars but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.review-logos-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scroll bars on all child elements */
+.review-logos-section * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.review-logos-section *::-webkit-scrollbar {
+  display: none;
+}
+
+.review-logos-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 60, 60, 0.2), transparent);
+}
+
+.review-logos-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 60, 60, 0.2), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Logos Showcase */
+.logos-showcase {
+  position: relative;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s ease;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  min-height: 140px;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 60, 60, 0.2);
+}
+
+/* Logo Link Styling */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:focus {
+  outline: none;
+}
+
+.logo-link:focus-visible {
+  outline: 2px solid #ff3c3c;
+  outline-offset: 2px;
+  border-radius: 16px;
+}
+
+.logo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 60, 60, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item:hover .logo-container::before {
+  opacity: 1;
+}
+
+.logo-item:hover .logo-container {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: #ff3c3c;
+}
+
+.logo-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+  filter: none;
+}
+
+.logo-item:hover .logo-container img {
+  transform: scale(1.05);
+}
+
+.company-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.logo-item:hover .company-name {
+  color: #ff3c3c;
+}
+
+/* Special styling for dark background logos (Clutch and Trustpilot) */
+.logo-item:first-child .logo-container,
+.logo-item:last-child .logo-container {
+  background: rgb(25, 22, 22, 0.97) !important;
+  border-color: #333 !important;
+}
+
+.logo-item:first-child .logo-container img,
+.logo-item:last-child .logo-container img {
+  filter: brightness(0) invert(1) !important;
+}
+
+.logo-item:hover .logo-item:first-child .logo-container,
+.logo-item:hover .logo-item:last-child .logo-container {
+  border-color: #ff3c3c !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .logos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+  }
+  
+  .section-header h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .review-logos-section {
+    padding: 60px 0;
+  }
+  
+  .logos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  
+  .section-header h3 {
+    font-size: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-logos-section {
+    padding: 50px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-header h3 {
+    font-size: 1.8rem;
+  }
+  
+  .logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .logo-item {
+    padding: 15px;
+    min-height: 120px;
+  }
+  
+  .logo-container {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-container img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .company-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 0;
+    /* Hide scroll bars but keep functionality */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .logos-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .logo-item {
+    padding: 12px 8px;
+    min-height: 80px;
+    min-width: 80px;
+  }
+  
+  .logo-container {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+  
+  .logo-container img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .company-name {
+    font-size: 0.7rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logos-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    overflow-x: auto;
+    /* Hide scroll bars but keep functionality */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .logos-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .logo-item {
+    padding: 8px 6px;
+    min-height: 70px;
+    min-width: 70px;
+  }
+  
+  .logo-container {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 6px;
+  }
+  
+  .logo-container img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .company-name {
+    font-size: 0.65rem;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Animation for logo items */
+.logo-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.logo-item:nth-child(1) { animation-delay: 0.1s; }
+.logo-item:nth-child(2) { animation-delay: 0.2s; }
+.logo-item:nth-child(3) { animation-delay: 0.3s; }
+.logo-item:nth-child(4) { animation-delay: 0.4s; }
+.logo-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects enhancement */
+.logo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 60, 60, 0.05), transparent);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item:hover::before {
+  opacity: 1;
+}
+
+/* Cursor pointer for better UX */
+.logo-item {
+  cursor: pointer;
+}
+
+.logo-item:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+.services-list-page {
+  background: #fff;
+}
+
+/* Hero Section Breadcrumbs */
+.hero-breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item:hover {
+  color: #fff;
+}
+
+.breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 5px;
+  }
+} 

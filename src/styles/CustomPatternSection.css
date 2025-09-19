@@ -1,0 +1,39 @@
+.custom-pattern-section {
+  background: url('../assets/images/icons/pattern-8.jpg') center/cover no-repeat;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 48px 0;
+  position: relative;
+}
+.custom-pattern-section h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.floating-img {
+  animation: floatY 3s ease-in-out infinite;
+  display: block;
+  width: 24rem;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  .custom-pattern-section {
+    flex-direction: column !important;
+    min-height: 320px !important;
+  }
+  .floating-img {
+    width: 12rem !important;
+    margin-bottom: 1.5rem;
+  }
+} 

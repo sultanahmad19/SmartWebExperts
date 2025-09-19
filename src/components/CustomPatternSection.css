@@ -1,0 +1,270 @@
+/* Modern Pricing Section */
+.custom-pattern-section {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  margin: 48px 0;
+  position: relative;
+  background: linear-gradient(135deg, #ff3c3c 0%, #ff6b6b 100%);
+  overflow: hidden;
+}
+
+/* Left Content Section */
+.left-content {
+  flex: 0 0 35%;
+  padding-left: 60px;
+  z-index: 2;
+}
+
+.left-content .center-text {
+  margin-top: 30px;
+}
+
+.left-content .center-text h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Button Styles */
+.theme-btn {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  z-index: 0;
+  text-decoration: none;
+}
+
+.theme-btn .btn-title {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.btn-style-one {
+  position: relative;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 18px 40px;
+  font-weight: 700;
+  overflow: hidden;
+  color: #222222;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-style-one:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+}
+
+/* Right Pricing Cards */
+.pricing-cards {
+  flex: 0 0 60%;
+  display: flex;
+  gap: 20px;
+  padding-right: 60px;
+  z-index: 2;
+}
+
+/* Individual Pricing Card */
+.pricing-card {
+  flex: 1;
+  background: #ec070700;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.card-header {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.pricing-card.silver .card-header {
+  background: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+}
+
+.pricing-card.gold .card-header {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+}
+
+.pricing-card.platinum .card-header {
+  background: linear-gradient(135deg, #e5e4e2 0%, #b8b8b8 100%);
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1;
+  padding: 25px 20px;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-features li {
+  color: #333333;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding-left: 0;
+  position: relative;
+}
+
+.package-features li:before {
+  content: '•';
+  color: #1a1919;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.price {
+  color: #222222;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .custom-pattern-section {
+    padding: 50px 0;
+  }
+  
+  .left-content {
+    padding-left: 40px;
+  }
+  
+  .pricing-cards {
+    padding-right: 40px;
+    gap: 15px;
+  }
+  
+  .left-content .center-text h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .custom-pattern-section {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 40px;
+  }
+  
+  .left-content {
+    padding-left: 0;
+    text-align: center;
+    flex: 0 0 auto;
+  }
+  
+  .pricing-cards {
+    padding-right: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .left-content .center-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-pattern-section {
+    padding: 40px 15px;
+    gap: 30px;
+  }
+  
+  .pricing-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    min-height: auto;
+  }
+  
+  .left-content .center-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .btn-style-one {
+    padding: 16px 35px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-pattern-section {
+    padding: 30px 10px;
+    gap: 25px;
+  }
+  
+  .left-content .center-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .card-header {
+    padding: 15px;
+  }
+  
+  .card-body {
+    padding: 20px 15px;
+  }
+  
+  .card-footer {
+    padding: 15px;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+  }
+  
+  .package-features li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+} 

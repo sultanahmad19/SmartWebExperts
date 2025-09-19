@@ -1,0 +1,17 @@
+# Smart Web Experts - Robots.txt
+# This file tells search engines how to crawl your website
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engine bots to access your site
+User-agent: *
+
+# Allow access to all pages (no restrictions)
+Disallow:
+
+# Tell search engines where to find your sitemap
+Sitemap: https://www.smartwebexperts.com/sitemap.xml
+
+# Optional: Block specific folders if needed in the future
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
